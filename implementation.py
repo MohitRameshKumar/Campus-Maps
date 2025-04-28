@@ -29,7 +29,7 @@ classrooms = [#B Building Done
               #R second floor Done
               'R201', 'R205', 'R202', 'R206', 'R203', 'R207', 'R215', 'R210', 'R216', 'R213', 'R211', 'R217', 'R212',
               #Other
-              'Library', 'MPR', 'Track', 'Band', 'Orchestra', 'Large Gym', 'Small Gym', 'Pool', 'Theatre', 'Boys Locker Room', 'Girls Locker Room', 'Weight Room', 'Tennis Courts', 'Front Parking Lot', 'Back Parking Lot', 'Main Office', 'Large Gym Corner', 'Cafe', 'Cafeteria'
+              'Library', 'MPR', 'Track', 'Band', 'Orchestra', 'Large Gym', 'Small Gym', 'Pool', 'Theatre', 'Boys Locker Room', 'Girls Locker Room', 'Weight Room', 'Tennis Courts', 'Front Parking Lot', 'Back Parking Lot', 'Main Office', 'Large Gym Corner', 'Cafe', 'Cafeteria',
               #Stairs Done
               'RStair1', 'RStair2', 'RStair3', 'QStair1', 'QStair2', 'QStair3', 'RBackCorner'
               ]
@@ -42,8 +42,8 @@ distances = {
     ('B5', 'B6'): 25,
     ('B6', 'B7'): 25,
     ('B7', 'B8'): 25,
-    ('B8', 'C6'): 110, #approximate
-    ('B4', 'C4'): 110, #approximate
+    ('B8', 'C6'): 130, #approximate
+    ('B4', 'C4'): 130, #approximate
     ('C1', 'C2'): 25,
     ('C2', 'C3'): 25,
     ('C3', 'C4'): 35,
@@ -67,7 +67,8 @@ distances = {
     ('D4', 'E2'): 10,
     ('E2', 'E3'): 66.6,
     ('D5', 'E1'): 10,
-    ('D6', 'MPR'): 125,
+    ('D6', 'Cafeteria'): 75,
+    ('Cafeteria', 'MPR'): 100,
     ('E1', 'E4'): 66.6,
     ('E1', 'E2'): 30, #approximate
     ('E3', 'E4'): 10,
@@ -83,19 +84,19 @@ distances = {
     ('R120', 'R121'): 33,
     ('R121', 'R123'): 33,
     ('R123', 'R124'): 20,
-    ('R124', 'RBackCorner'): 150,
-    ('H9', 'RBackCorner'): 200,
+    ('R124', 'RBackCorner'): 175,
+    ('H9', 'RBackCorner'): 225,
     ('R101', 'RStair1'): 50,
     ('R102', 'RStair2'): 10,
     ('R120', 'RStair3'): 10,
-    ('RStair1', 'R201'): 100,
+    ('RStair1', 'R201'): 50,
     ('RStair2', 'R203'): 60,
     ('RStair3', 'R211'): 60,
     ('R211', 'R212'): 20,
     ('R201', 'R202'): 66,
     ('R202', 'R203'): 30,
     ('R203', 'R211'): 66,
-    ('RBackCorner', 'I6'): 125,
+    ('RBackCorner', 'I6'): 150,
     ('I6', 'I7'): 50,
     ('I7', 'I8'): 25,
     ('I8', 'I9'): 25,
@@ -190,15 +191,16 @@ distances = {
     ('H12', 'H5'): 50,
     ('H12', 'H6'): 40,
     ('H5', 'H6'): 40,
-    ('H1', 'H2'): 83,
+    ('H1', 'H2'): 60,
     ('H2', 'H3'): 50,
     ('H1', 'Library'): 150,
     ('H2', 'RStair1'): 100,
     ('H2', 'C6'): 200,
     ('Boys Locker Room', 'Large Gym'): 50,
+    ('Boys Locker Room', 'Cafe'): 150,
     ('Girls Locker Room', 'Small Gym'): 50,
     ('Cafe', 'Library'): 250,
-    ('Library', 'B8'): 175,
+    ('Library', 'B8'): 200,
     ('Large Gym Corner', 'Tennis Courts'): 125,
     ('Track', 'Tennis Courts'): 125,
     ('G1', 'Back Parking Lot'): 25,
@@ -239,7 +241,7 @@ distances = {
     }
 
 start = 'Weight Room'
-end = 'R211'
+end = 'R201'
 
 #DONT CHANGE
 def minimum(distances, unexplored):
