@@ -194,7 +194,7 @@ distances = {
     ('H1', 'H2'): 60,
     ('H2', 'H3'): 50,
     ('H1', 'Library'): 150,
-    ('H2', 'RStair1'): 100,
+    ('H2', 'RStair1'): 125,
     ('H2', 'C6'): 200,
     ('Boys Locker Room', 'Large Gym'): 50,
     ('Boys Locker Room', 'Cafe'): 150,
@@ -240,8 +240,8 @@ distances = {
 
     }
 
-start = 'Weight Room'
-end = 'R201'
+start = input('Start:').strip()
+end = input('End:').strip()
 
 #DONT CHANGE
 def minimum(distances, unexplored):
